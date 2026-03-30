@@ -1,0 +1,20 @@
+{
+  "name": "azure-app-service-site",
+  "version": "1.0.0",
+  "description": "Bootstrap carousel site optimized for Azure App Service",
+  "scripts": {
+    "minify:css": "cleancss -o carousel.min.css carousel.css",
+    "minify:js": "uglifyjs js/bootstrap.js -o js/bootstrap.min.js -c -m",
+    "optimize:images": "imagemin img/* --out-dir=img/optimized --plugin=webp --plugin=mozjpeg",
+    "build": "npm run minify:css && npm run minify:js && npm run optimize:images",
+    "lighthouse": "lighthouse http://localhost:8080 --view"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "uglify-js": "^3.17.4",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-webp": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "lighthouse": "^10.4.0"
+  }
+}
