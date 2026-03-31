@@ -1,0 +1,109 @@
+/* Dark Mode Variables */
+:root {
+  --bg-primary-light: #ffffff;
+  --bg-primary-dark: #1a1a1a;
+  --bg-secondary-light: #f9f9f9;
+  --bg-secondary-dark: #2d2d2d;
+  --text-primary-light: #5a5a5a;
+  --text-primary-dark: #e0e0e0;
+  --text-secondary-light: #333333;
+  --text-secondary-dark: #b0b0b0;
+  --navbar-bg-dark: #1f1f1f;
+  --carousel-overlay-dark: rgba(0, 0, 0, 0.85);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: var(--bg-primary-dark);
+  color: var(--text-primary-dark);
+}
+
+body.dark-mode .navbar-inverse {
+  background-color: var(--navbar-bg-dark);
+  border-color: #333;
+}
+
+body.dark-mode .carousel-caption {
+  background-color: var(--carousel-overlay-dark);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+body.dark-mode .marketing h2,
+body.dark-mode .featurette h2 {
+  color: var(--text-primary-dark);
+}
+
+body.dark-mode .marketing p,
+body.dark-mode .featurette p {
+  color: var(--text-secondary-dark);
+}
+
+body.dark-mode footer {
+  background-color: var(--bg-secondary-dark);
+  color: var(--text-secondary-dark);
+}
+
+body.dark-mode .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #0a58ca;
+  border-color: #0a58ca;
+}
+
+/* Toggle Button Styles */
+.dark-mode-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+  background: transparent;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 46px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
+  border-color: #888;
+}
+
+body.dark-mode .dark-mode-toggle {
+  border-color: #555;
+}
+
+@media (max-width: 767px) {
+  .dark-mode-toggle {
+    top: auto;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+/* Smooth transitions */
+body,
+.navbar-inverse,
+.carousel-caption,
+.marketing h2,
+.marketing p,
+footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
